@@ -1,0 +1,421 @@
+/*
+Theme Name: Barecity
+Theme URI: http://shaheeilyas.com/
+Description: Minimal theme with bare essentials
+Version: 1.5
+Author: Shahee Ilyas
+Date: February 2008
+Based on the Classic WordPress by Dave Shea || http://mezzoblue.com & Matthew Mullenweg || http://photomatt.net
+Modified & completely redesigned by Shahee Ilyas || http://shaheeilyas.com
+
+	The CSS, XHTML and design is released under GPL:
+	http://www.opensource.org/licenses/gpl-license.php
+
+Adaptations for RBAC Admin Application by M.E. Post
+*/
+
+a {
+	text-decoration: none; 
+	color: #000;
+}
+
+a:active {
+	text-decoration: none;
+	color: #000;
+}
+
+a:visited {
+	text-decoration: none;
+	color: #000;
+}
+
+a:hover {
+	text-decoration: none; 
+	color: #000;
+}
+
+a img {
+	border: none;
+}
+
+acronym, abbr {
+}
+
+acronym, abbr, span.caps {
+	font-size: 11px;
+}
+
+acronym, abbr {
+	cursor: help;
+	border: none;
+}
+
+blockquote {
+	border-left: 5px solid #ccc;
+	margin-left: 18px;
+	padding-left: 5px;
+}
+
+body {
+	background: #fff;
+	color: #000;
+	font-family: "Segoe UI", Verdana, Arial, Helvetica, sans-serif;
+	margin: 0;
+	padding: 0;
+	font-size: 12px;
+}
+
+cite {
+	font-size: 11px;
+	font-style: normal;
+	color:#666;
+}
+
+h1 {
+	font-family: "Palatino Linotype", Baskerville, Georgia, "Times New Roman", serif;
+	padding-top: 10px;
+	padding-bottom: 5px;
+	font-size: 20px;
+	color: black;
+	font-weight: normal;	
+}
+
+h2 {
+	font-family: "Palatino Linotype", Baskerville, Georgia, "Times New Roman", serif;
+	margin: 15px 0 2px 0;
+	padding-bottom: 10px;
+	font-size: 13px;
+	color: #666;
+}
+
+h3 {
+	font-family: "Palatino Linotype", Baskerville, Georgia, "Times New Roman", serif;
+	margin-top: 0;
+	font-size: 13px;
+}
+
+p, li, .feedback {
+	font-size: 11px;
+}
+
+.storytitle {
+	margin: 0;
+}
+
+.storytitle a {
+	text-decoration: none;
+}
+
+.storycontent a {
+	text-decoration: none;
+	border-bottom: 1px dotted #888;
+}
+
+.storycontent a:hover {
+	text-decoration: none;
+	border-bottom: 1px dashed #888;
+}
+ 
+.post {
+	margin-bottom:18px;
+}
+
+#content {
+	float: left;
+	width: 500px;
+	padding-bottom: 2em;
+}
+
+#header {
+	font-family: "Palatino Linotype", Baskerville, Georgia, "Times New Roman", serif;
+	font-size: 34px;
+	color: black;
+	font-weight: normal;	
+}
+
+#headwrap {
+	padding: 12px 0 8px 0;
+	margin: 24px 0 12px 0;
+}
+
+#header a {
+	color: black;
+	text-decoration: none;
+}
+
+#header a:hover {
+	text-decoration: none;
+}
+
+ul {
+	color: #000;
+	list-style-type: none;
+	margin: 0;
+	padding-left: 3px;
+}
+
+ul li {
+	font-family: "Segoe UI", Verdana, Arial, Helvetica, sans-serif;
+	margin-top: 10px;
+	padding-bottom: 2px;
+}
+
+ul li a {
+	color: #000;
+	text-decoration: none;
+}
+
+ul li a:hover {
+	border-bottom: 1px solid #809080;
+}
+
+#rap {
+	background-color: #fff;
+	margin-right:auto;
+	margin-left:70px;
+	width:700px;
+	padding: 6px;
+}
+
+#desc {
+	float:left;
+	font-size: 12px;
+	margin-top:3px;
+	padding-bottom: 1em;
+}
+
+#desc a:link, #desc a:visited  {
+	display: inline;
+	background-color: #fff;
+	color: #666;
+	text-decoration: none;
+}
+
+#desc a:hover {
+	background-color: #eee;
+	color: #666;
+}
+
+#desc a:active {
+	background-color: #fff;
+}
+
+/* RBAC Admin Application additions */
+
+label {
+  float: left;
+  font-weight: normal;
+  color: #000;
+}
+
+label.resized {
+	padding-right: 1.5em;
+}
+
+label + input {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input[type="text"] {
+  width: 180px;
+  margin-bottom: 5px;
+}
+
+input[type="checkbox"] {
+	width: 40px;
+}
+
+caption {
+	display: none;
+}
+
+textarea {
+  width: 250px;
+  height: 150px;
+}
+
+select {
+	display: block;
+	margin-bottom: 0.5em;
+}
+
+#submitbutton {
+  margin-left: 120px;
+  margin-top: 5px;
+  width: 90px;
+}
+
+br {
+  clear: left;
+}
+
+table.stripeMe {
+	border-collapse: collapse;
+	width: 100%;
+	font-size: 1em;
+	margin-left: 0px;
+	margin-bottom: 3em;
+	margin-top: 1em;
+}
+
+.checkbox {
+	width: 20px !important;
+}
+
+table.stripeMe th {
+	background: #ccc;
+	color: #000;
+	font-weight: bold;
+	text-align: left;
+	border-right: 1px solid #fff;
+	line-height: 1.2;
+}
+ 
+table.stripeMe td {
+	border-bottom: 1px solid #d6e0d7;
+	vertical-align: top;
+	background: #fff;
+	white-space: nowrap;
+	padding-right: 10px !important;
+}
+ 
+table.stripeMe td * {
+	padding: 6px 11px;
+}
+ 
+table.stripeMe tr.alt td {
+	background: #ecf6fc;
+}
+ 
+table.stripeMe tr.over td {
+	background: #bcd4ec;
+}
+
+table.stripeMe tr.last td {
+	background: #f2cfe0;
+}
+
+table.stripeMe option {
+	line-height: 1em;
+}
+
+.non-standard {
+	color: #f00;
+}
+
+fieldset {
+	display: none;
+}
+
+.dropdown_highlight {
+  color: #f00;
+  font-weight: bold;
+}
+
+.hidden {
+	display: none;
+}
+
+.header {
+	padding-right: 20px !important;
+}
+
+.strikethrough {
+  color: #f00;
+  text-decoration: line-through;
+}
+
+.alert {
+	color: #f00;
+	font-size: 24pt;
+}
+
+.locked {
+	background-image: url('images/lock-16x16.png');
+	background-repeat: no-repeat;
+	height: 4px;
+}
+
+.locked span {
+	display: none;
+}
+
+.unlocked {
+	background-image: url('images/lock-off-16x16.png');
+	background-repeat: no-repeat;
+	height: 4px;
+}
+
+.unlocked span {
+	display: none;
+}
+
+.hidden {
+	display: none;
+}
+
+td.disabled+td {
+	color: #999;
+}
+
+.boxes { 
+	position: relative;
+  width: 10em;
+  height: 10em; 
+  margin-top: 2em;
+}
+
+#box1, #box2, #box3, #box4 { 
+	position: absolute;
+  width: 20em;
+  height: 20em;
+  left: 0;
+  top: 0; 
+}
+
+#box2, #box4 { 
+	left: 25em; 
+}
+
+#box3, #box4 { 
+	top: 25em; 
+	bottom: 25em;
+}
+
+#box1, #box2, #box3 {
+	background-color: #ecf6fc;
+	padding: 2em;
+}
+
+#box4 {
+	background-color: #eee;
+	padding: 2em;
+}
+
+#DOMWindow {
+	border-radius: 1.6em;
+	border-width: 8px !important;
+}
+
+#DOMWindow form {
+	text-align: left; 
+	padding-top: 40px;
+	padding-left: 40px;
+}
+
+#DOMWindow form label {
+	width: 100px;
+}
+
+div.marginspace {
+	padding-bottom: 2em;
+}
+
+.error {
+  color: #f00;
+}
+
+.no-error {
+  color: #0f0;
+}

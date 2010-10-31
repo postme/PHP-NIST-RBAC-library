@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>{title}</title>	
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta http-equiv="content-language" content="{language}" />
+	<meta name="author" content="M.E. Post" />
+	<meta name="copyright" content="Copyright (c) M.E. Post 2008" />
+	<link rel="stylesheet" href="{includepath}/css/include.css" type="text/css" media="screen" />
+	<script type="text/javascript">
+      var path = '{includepath}';
+  </script>
+  <script type="text/javascript" src="{includepath}/js/jquery-1.3.2.min.js"></script>
+	<script type="text/javascript" src="{includepath}/js/include.js"></script>
+</head>
+
+<body>
+	<div id="rap">	
+	  <div id="headwrap">
+		  <div id="header">
+			  <a href="{path}/">{title}</a>
+		  </div>
+		  <div id="desc">        
+			  <a href="{path}/">{subtitle}</a>
+		  </div>   
+	  </div>
+	  <div id="content">
+		  <div class="storycontent">
+		    {replace_content}
+		  </div>
+    </div>
+  </div>
+</body>
+
+</html>

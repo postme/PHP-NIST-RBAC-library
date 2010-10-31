@@ -1,0 +1,4 @@
+{
+	"lang":"nl-NL",
+	"Please enter a valid first name":"Voer svp een geldige voornaam in"
+}

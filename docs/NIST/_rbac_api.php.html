@@ -1,0 +1,1102 @@
+<html>
+<head>
+<title>Docs for page rbac_api.php</title>
+<link rel="stylesheet" type="text/css" href="../media/style.css">
+</head>
+<body>
+
+<table border="0" cellspacing="0" cellpadding="0" height="48" width="100%">
+  <tr>
+    <td class="header_top">NIST</td>
+  </tr>
+  <tr><td class="header_line"><img src="../media/empty.png" width="1" height="1" border="0" alt=""  /></td></tr>
+  <tr>
+    <td class="header_menu">
+        
+                                    
+                              		  [ <a href="../classtrees_NIST.html" class="menu">class tree: NIST</a> ]
+		  [ <a href="../elementindex_NIST.html" class="menu">index: NIST</a> ]
+		  	    [ <a href="../elementindex.html" class="menu">all elements</a> ]
+    </td>
+  </tr>
+  <tr><td class="header_line"><img src="../media/empty.png" width="1" height="1" border="0" alt=""  /></td></tr>
+</table>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="200" class="menu">
+      <b>Packages:</b><br />
+              <a href="../li_NIST.html">NIST</a><br />
+            <br /><br />
+                        <b>Files:</b><br />
+      	  <div class="package">
+			<a href="../NIST/_rbac_api.php.html">		rbac_api.php
+		</a><br>
+	  </div><br />
+      
+      
+                </td>
+    <td>
+      <table cellpadding="10" cellspacing="0" width="100%" border="0"><tr><td valign="top">
+
+<h1>Procedural File: rbac_api.php</h1>
+Source Location: /rbac_api.php<br /><br />
+
+<br>
+<br>
+
+
+<h2>Page Details:</h2>
+NIST Core RBAC<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>author:</b>&nbsp;&nbsp;</td><td>M.E. Post &lt;<a href="mailto:meint@meint.net">meint@meint.net</a>&gt;</td>
+  </tr>
+  <tr>
+    <td><b>version:</b>&nbsp;&nbsp;</td><td>0.57</td>
+  </tr>
+  <tr>
+    <td><b>copyright:</b>&nbsp;&nbsp;</td><td>M.E. Post</td>
+  </tr>
+  <tr>
+    <td><b>license:</b>&nbsp;&nbsp;</td><td><a href="http://opensource.org/licenses/gpl-license.php">GNU Public License</a></td>
+  </tr>
+</table>
+</div>
+<br /><br />
+<h4>Includes:</h4>
+<div class="tags">
+include(dirname(__FILE__).'/configuration.php') [line 25]<br />
+The configuration file contains the settings for database connectivity<br /><br /></div>
+<br /><br />
+<br /><br />
+<br />
+  <hr />
+	<a name="functionAddActiveRole"></a>
+	<h3>AddActiveRole <span class="smalllinenumber">[line 822]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>boolean AddActiveRole(
+[string $user = &#039;&#039;], [string $session = &#039;&#039;], [array $roles = array()])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+
+		This function adds a role as an active role of a session whose owner is a  given user<br /><br /><p>This function adds a role as an active role of a session whose owner is a  given user. The function is valid if and only if: <ul><li>The user is a member of the USERS data set, and</li><li>The role is a member of the ROLES data set, and</li><li>The session identifier is a member of the SESSIONS data set, and</li><li>The role is assigned to the user, and</li><li>The session is owned by that user.</li></ul></p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>Example:  <ol><li><div class="src-line">&nbsp;<span class="src-php">&lt;?php</span></div></li>
+<li><div class="src-line">&nbsp;<a href="../NIST/_rbac_api.php.html#functionAddActiveRole">AddActiveRole</a><span class="src-sym">(</span><span class="src-str">'username'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'session'</span><span class="src-sym">,&nbsp;</span><span class="src-key">array</span><span class="src-sym">(</span><span class="src-str">'role'</span><span class="src-sym">,</span><span class="src-str">'...'</span><span class="src-sym">))</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-php">?&gt;</span></div></li>
+</ol></td>
+  </tr>
+</table>
+</div>
+    <br /><br />
+	
+    		<h4>Parameters</h4>
+    <table border="0" cellspacing="0" cellpadding="0">
+		      <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$user</b>&nbsp;&nbsp;</td>
+        <td>username</td>
+      </tr>
+		      <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$session</b>&nbsp;&nbsp;</td>
+        <td>session identifier</td>
+      </tr>
+		      <tr>
+        <td class="type">array&nbsp;&nbsp;</td>
+        <td><b>$roles</b>&nbsp;&nbsp;</td>
+        <td>an array of role names</td>
+      </tr>
+				</table>
+    	<div class="top">[ <a href="#top">Top</a> ]</div><br /><br />
+	</div>
+  <hr />
+	<a name="functionAddObject"></a>
+	<h3>AddObject <span class="smalllinenumber">[line 1372]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>boolean AddObject(
+[string $object = &#039;&#039;], [boolean $locked = 0])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+
+		Add an Object to the database that is the subject of a permission<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>Example:  <ol><li><div class="src-line">&nbsp;<span class="src-php">&lt;?php</span></div></li>
+<li><div class="src-line">&nbsp;<a href="../NIST/_rbac_api.php.html#functionAddObject">AddObject</a><span class="src-sym">(</span><span class="src-str">'object'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'0&nbsp;or&nbsp;1'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-php">?&gt;</span></div></li>
+</ol></td>
+  </tr>
+</table>
+</div>
+    <br /><br />
+	
+    		<h4>Parameters</h4>
+    <table border="0" cellspacing="0" cellpadding="0">
+		      <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$object</b>&nbsp;&nbsp;</td>
+        <td>object name</td>
+      </tr>
+		      <tr>
+        <td class="type">boolean&nbsp;&nbsp;</td>
+        <td><b>$locked</b>&nbsp;&nbsp;</td>
+        <td>is the object locked or not</td>
+      </tr>
+				</table>
+    	<div class="top">[ <a href="#top">Top</a> ]</div><br /><br />
+	</div>
+  <hr />
+	<a name="functionAddOperation"></a>
+	<h3>AddOperation <span class="smalllinenumber">[line 1495]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>boolean AddOperation(
+[string $operation = &#039;&#039;], [string $mask = &#039;&#039;], [boolean $locked = 0])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+
+		Add an Operation to the database that is the subject of a permission<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>Example:  <ol><li><div class="src-line">&nbsp;<span class="src-php">&lt;?php</span></div></li>
+<li><div class="src-line">&nbsp;<a href="../NIST/_rbac_api.php.html#functionAddOperation">AddOperation</a><span class="src-sym">(</span><span class="src-str">'operation'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'0000&nbsp;-&nbsp;1111'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'0&nbsp;or&nbsp;1'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-php">?&gt;</span></div></li>
+</ol></td>
+  </tr>
+</table>
+</div>
+    <br /><br />
+	
+    		<h4>Parameters</h4>
+    <table border="0" cellspacing="0" cellpadding="0">
+		      <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$operation</b>&nbsp;&nbsp;</td>
+        <td>operation name</td>
+      </tr>
+		      <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$mask</b>&nbsp;&nbsp;</td>
+        <td>a bitmask to determine create, read, update and delete settings</td>
+      </tr>
+		      <tr>
+        <td class="type">boolean&nbsp;&nbsp;</td>
+        <td><b>$locked</b>&nbsp;&nbsp;</td>
+        <td>is the operation locked or not</td>
+      </tr>
+				</table>
+    	<div class="top">[ <a href="#top">Top</a> ]</div><br /><br />
+	</div>
+  <hr />
+	<a name="functionAddPermission"></a>
+	<h3>AddPermission <span class="smalllinenumber">[line 1236]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>boolean AddPermission(
+[string $permission = &#039;&#039;], [string $object = &#039;&#039;], [string $operation = &#039;&#039;])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+
+		This command creates a new permission.<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>Example:  <ol><li><div class="src-line">&nbsp;<span class="src-php">&lt;?php</span></div></li>
+<li><div class="src-line">&nbsp;<a href="../NIST/_rbac_api.php.html#functionAddPermission">AddPermission</a><span class="src-sym">(</span><span class="src-str">'permission'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'object'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'operation'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-php">?&gt;</span></div></li>
+</ol></td>
+  </tr>
+</table>
+</div>
+    <br /><br />
+	
+    		<h4>Parameters</h4>
+    <table border="0" cellspacing="0" cellpadding="0">
+		      <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$permission</b>&nbsp;&nbsp;</td>
+        <td>permission name</td>
+      </tr>
+		      <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$object</b>&nbsp;&nbsp;</td>
+        <td>object name</td>
+      </tr>
+		      <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$operation</b>&nbsp;&nbsp;</td>
+        <td>operation name</td>
+      </tr>
+				</table>
+    	<div class="top">[ <a href="#top">Top</a> ]</div><br /><br />
+	</div>
+  <hr />
+	<a name="functionAddRole"></a>
+	<h3>AddRole <span class="smalllinenumber">[line 195]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>boolean AddRole(
+[string $role = &#039;&#039;])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+
+		This command creates a new role.<br /><br /><p>The command is valid if and only if the new  role is not already a member of the ROLES data set. The ROLES data set and  the functions assigned_users and assigned_permissions are updated. Initially,  no user or permission is assigned to the new role.</p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>Example:  <ol><li><div class="src-line">&nbsp;<span class="src-php">&lt;?php</span></div></li>
+<li><div class="src-line">&nbsp;<a href="../NIST/_rbac_api.php.html#functionAddRole">AddRole</a><span class="src-sym">(</span><span class="src-str">'role'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-php">?&gt;</span></div></li>
+</ol></td>
+  </tr>
+</table>
+</div>
+    <br /><br />
+	
+    		<h4>Parameters</h4>
+    <table border="0" cellspacing="0" cellpadding="0">
+		      <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$role</b>&nbsp;&nbsp;</td>
+        <td>role name</td>
+      </tr>
+				</table>
+    	<div class="top">[ <a href="#top">Top</a> ]</div><br /><br />
+	</div>
+  <hr />
+	<a name="functionAddUser"></a>
+	<h3>AddUser <span class="smalllinenumber">[line 57]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>boolean AddUser(
+[string $user = &#039;&#039;], [string $password = &#039;&#039;], [string $first_name = &#039;&#039;], [string $family_name = &#039;&#039;], [string $email = &#039;&#039;])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+
+		This command creates a new RBAC user.<br /><br /><p>The command is valid only if the new user is not already a member of the  USERS data set. The USER data set is updated. The new user does not own  any session at the time of its creation.</p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>Example:  <ol><li><div class="src-line">&nbsp;<span class="src-php">&lt;?php</span></div></li>
+<li><div class="src-line">&nbsp;<a href="../NIST/_rbac_api.php.html#functionAddUser">AddUser</a><span class="src-sym">(</span><span class="src-str">'username'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'password'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'first_name'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'family_name'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'email'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-php">?&gt;</span></div></li>
+</ol></td>
+  </tr>
+</table>
+</div>
+    <br /><br />
+	
+    		<h4>Parameters</h4>
+    <table border="0" cellspacing="0" cellpadding="0">
+		      <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$user</b>&nbsp;&nbsp;</td>
+        <td>username</td>
+      </tr>
+		      <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$password</b>&nbsp;&nbsp;</td>
+        <td>password</td>
+      </tr>
+		      <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$first_name</b>&nbsp;&nbsp;</td>
+        <td>first name</td>
+      </tr>
+		      <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$family_name</b>&nbsp;&nbsp;</td>
+        <td>family name</td>
+      </tr>
+		      <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$email</b>&nbsp;&nbsp;</td>
+        <td>email address</td>
+      </tr>
+				</table>
+    	<div class="top">[ <a href="#top">Top</a> ]</div><br /><br />
+	</div>
+  <hr />
+	<a name="functionAssignedRoles"></a>
+	<h3>AssignedRoles <span class="smalllinenumber">[line 1062]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>array AssignedRoles(
+[string $user = &#039;&#039;])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+
+		This function returns the set of roles assigned to a given user.<br /><br /><p>The function is valid if and only if the user is a member of the USERS data set.</p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>Example:  <ol><li><div class="src-line">&nbsp;<span class="src-php">&lt;?php</span></div></li>
+<li><div class="src-line">&nbsp;<a href="../NIST/_rbac_api.php.html#functionAssignedRoles">AssignedRoles</a><span class="src-sym">(</span><span class="src-str">'username'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-php">?&gt;</span></div></li>
+</ol></td>
+  </tr>
+</table>
+</div>
+    <br /><br />
+	
+    		<h4>Parameters</h4>
+    <table border="0" cellspacing="0" cellpadding="0">
+		      <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$user</b>&nbsp;&nbsp;</td>
+        <td>username</td>
+      </tr>
+				</table>
+    	<div class="top">[ <a href="#top">Top</a> ]</div><br /><br />
+	</div>
+  <hr />
+	<a name="functionAssignedUsers"></a>
+	<h3>AssignedUsers <span class="smalllinenumber">[line 1034]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>array AssignedUsers(
+[string $role = &#039;&#039;])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+
+		This function returns the set of users assigned to a given role. The function  is valid if and only if the role is a member of the ROLES data set.<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>Example:  <ol><li><div class="src-line">&nbsp;<span class="src-php">&lt;?php</span></div></li>
+<li><div class="src-line">&nbsp;<a href="../NIST/_rbac_api.php.html#functionAssignedUsers">AssignedUsers</a><span class="src-sym">(</span><span class="src-str">'rolename'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-php">?&gt;</span></div></li>
+</ol></td>
+  </tr>
+</table>
+</div>
+    <br /><br />
+	
+    		<h4>Parameters</h4>
+    <table border="0" cellspacing="0" cellpadding="0">
+		      <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$role</b>&nbsp;&nbsp;</td>
+        <td>role name</td>
+      </tr>
+				</table>
+    	<div class="top">[ <a href="#top">Top</a> ]</div><br /><br />
+	</div>
+  <hr />
+	<a name="functionAssignUser"></a>
+	<h3>AssignUser <span class="smalllinenumber">[line 320]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>boolean AssignUser(
+[string $user = &#039;&#039;], [array $roles = array()])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+
+		This command assigns a user to a role.<br /><br /><p>The command is valid if and only if  the user is a member of the USERS data set, the role is a member of the  ROLES data set, and the user is not already assigned to the role. The data  set UA and the function assigned_users are updated to reflect the assignment.</p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>Example:  <ol><li><div class="src-line">&nbsp;<span class="src-php">&lt;?php</span></div></li>
+<li><div class="src-line">&nbsp;<a href="../NIST/_rbac_api.php.html#functionAssignUser">AssignUser</a><span class="src-sym">(</span><span class="src-str">'username'</span><span class="src-sym">,&nbsp;</span><span class="src-key">array</span><span class="src-sym">(</span><span class="src-str">'role'</span><span class="src-sym">,</span><span class="src-str">'role'</span><span class="src-sym">,</span><span class="src-str">'...'</span><span class="src-sym">))</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-php">?&gt;</span></div></li>
+</ol></td>
+  </tr>
+</table>
+</div>
+    <br /><br />
+	
+    		<h4>Parameters</h4>
+    <table border="0" cellspacing="0" cellpadding="0">
+		      <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$user</b>&nbsp;&nbsp;</td>
+        <td>username</td>
+      </tr>
+		      <tr>
+        <td class="type">array&nbsp;&nbsp;</td>
+        <td><b>$roles</b>&nbsp;&nbsp;</td>
+        <td>an array of role names</td>
+      </tr>
+				</table>
+    	<div class="top">[ <a href="#top">Top</a> ]</div><br /><br />
+	</div>
+  <hr />
+	<a name="functionCheckAccess"></a>
+	<h3>CheckAccess <span class="smalllinenumber">[line 983]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>boolean CheckAccess(
+[string $session = &#039;&#039;], [string $object = &#039;&#039;], [string $operation = &#039;&#039;])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+
+		This function returns a Boolean value meaning whether the subject of a given  session is allowed or not to perform a given operation on a given object.<br /><br /><p>The function is valid if and only if the session identifier is a member of the  SESSIONS data set, the object is a member of the OBJS data set, and the  operation is a member of the OPS data set. The session’s subject has the  permission to perform the operation on that object if and only if that  permission is assigned to (at least) one of the session’s active roles.</p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>Example:  <ol><li><div class="src-line">&nbsp;<span class="src-php">&lt;?php</span></div></li>
+<li><div class="src-line">&nbsp;<a href="../NIST/_rbac_api.php.html#functionCheckAccess">CheckAccess</a><span class="src-sym">(</span><span class="src-str">'session'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'object'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'operation'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-php">?&gt;</span></div></li>
+</ol></td>
+  </tr>
+</table>
+</div>
+    <br /><br />
+	
+    		<h4>Parameters</h4>
+    <table border="0" cellspacing="0" cellpadding="0">
+		      <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$session</b>&nbsp;&nbsp;</td>
+        <td>session identifier</td>
+      </tr>
+		      <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$object</b>&nbsp;&nbsp;</td>
+        <td>object name</td>
+      </tr>
+		      <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$operation</b>&nbsp;&nbsp;</td>
+        <td>operation name</td>
+      </tr>
+				</table>
+    	<div class="top">[ <a href="#top">Top</a> ]</div><br /><br />
+	</div>
+  <hr />
+	<a name="functionCreateSession"></a>
+	<h3>CreateSession <span class="smalllinenumber">[line 631]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>boolean CreateSession(
+[string $user = &#039;&#039;], [string $session = &#039;&#039;])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+
+		This function creates a new session with a given user as owner and an active  role set.<br /><br /><p>This function creates a new session with a given user as owner and an active  role set. The function is valid if and only if: <ul><li>The user is a member of the USERS data set, and</li><li>The active role set is a subset of the roles assigned to that user. In a
+   RBAC implementation, the session's active roles might actually be the groups
+   that represent those roles.</li></ul> This function calls the <a href="../NIST/_rbac_api.php.html#functionDeleteSession">DeleteSession()</a> function to remove any expired sessions.</p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>Example:  <ol><li><div class="src-line">&nbsp;<span class="src-php">&lt;?php</span></div></li>
+<li><div class="src-line">&nbsp;<a href="../NIST/_rbac_api.php.html#functionCreateSession">CreateSession</a><span class="src-sym">(</span><span class="src-str">'user'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'session'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-php">?&gt;</span></div></li>
+</ol></td>
+  </tr>
+</table>
+</div>
+    <br /><br />
+	
+    		<h4>Parameters</h4>
+    <table border="0" cellspacing="0" cellpadding="0">
+		      <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$user</b>&nbsp;&nbsp;</td>
+        <td>username</td>
+      </tr>
+		      <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$session</b>&nbsp;&nbsp;</td>
+        <td>session identifier</td>
+      </tr>
+				</table>
+    	<div class="top">[ <a href="#top">Top</a> ]</div><br /><br />
+	</div>
+  <hr />
+	<a name="functionDeassignUser"></a>
+	<h3>DeassignUser <span class="smalllinenumber">[line 397]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>boolean DeassignUser(
+[string $user = &#039;&#039;], [array $roles = array()])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+
+		This command deletes the assignment of the user to the role.<br /><br /><p>The command is valid if and only if the user is a member of the USERS data set, the role  is a member of the ROLES data set, and the user is assigned to the role.  This function calls the <a href="../NIST/_rbac_api.php.html#functionDeleteSession">DeleteSession()</a> function to remove any open sessions.</p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>Example:  <ol><li><div class="src-line">&nbsp;<span class="src-php">&lt;?php</span></div></li>
+<li><div class="src-line">&nbsp;<a href="../NIST/_rbac_api.php.html#functionDeassignUser">DeassignUser</a><span class="src-sym">(</span><span class="src-str">'username'</span><span class="src-sym">,&nbsp;</span><span class="src-key">array</span><span class="src-sym">(</span><span class="src-str">'role'</span><span class="src-sym">,</span><span class="src-str">'role'</span><span class="src-sym">,</span><span class="src-str">'...'</span><span class="src-sym">))</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-php">?&gt;</span></div></li>
+</ol></td>
+  </tr>
+</table>
+</div>
+    <br /><br />
+	
+    		<h4>Parameters</h4>
+    <table border="0" cellspacing="0" cellpadding="0">
+		      <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$user</b>&nbsp;&nbsp;</td>
+        <td>username</td>
+      </tr>
+		      <tr>
+        <td class="type">array&nbsp;&nbsp;</td>
+        <td><b>$roles</b>&nbsp;&nbsp;</td>
+        <td>and array of role names</td>
+      </tr>
+				</table>
+    	<div class="top">[ <a href="#top">Top</a> ]</div><br /><br />
+	</div>
+  <hr />
+	<a name="functionDeleteObject"></a>
+	<h3>DeleteObject <span class="smalllinenumber">[line 1426]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>boolean DeleteObject(
+[array $objects = array()])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+
+		Delete an Object<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>Example:  <ol><li><div class="src-line">&nbsp;<span class="src-php">&lt;?php</span></div></li>
+<li><div class="src-line">&nbsp;<a href="../NIST/_rbac_api.php.html#functionDeleteObject">DeleteObject</a><span class="src-sym">(</span><span class="src-key">array</span><span class="src-sym">(</span><span class="src-str">'object'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'...'</span><span class="src-sym">))</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-php">?&gt;</span></div></li>
+</ol></td>
+  </tr>
+</table>
+</div>
+    <br /><br />
+	
+    		<h4>Parameters</h4>
+    <table border="0" cellspacing="0" cellpadding="0">
+		      <tr>
+        <td class="type">array&nbsp;&nbsp;</td>
+        <td><b>$objects</b>&nbsp;&nbsp;</td>
+        <td>array of object names</td>
+      </tr>
+				</table>
+    	<div class="top">[ <a href="#top">Top</a> ]</div><br /><br />
+	</div>
+  <hr />
+	<a name="functionDeleteOperation"></a>
+	<h3>DeleteOperation <span class="smalllinenumber">[line 1557]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>boolean DeleteOperation(
+[array $operations = array()])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+
+		Delete an Operation<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>Example:  <ol><li><div class="src-line">&nbsp;<span class="src-php">&lt;?php</span></div></li>
+<li><div class="src-line">&nbsp;<a href="../NIST/_rbac_api.php.html#functionDeleteOperation">DeleteOperation</a><span class="src-sym">(</span><span class="src-key">array</span><span class="src-sym">(</span><span class="src-str">'operation'</span><span class="src-sym">,</span><span class="src-str">'...'</span><span class="src-sym">))</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-php">?&gt;</span></div></li>
+</ol></td>
+  </tr>
+</table>
+</div>
+    <br /><br />
+	
+    		<h4>Parameters</h4>
+    <table border="0" cellspacing="0" cellpadding="0">
+		      <tr>
+        <td class="type">array&nbsp;&nbsp;</td>
+        <td><b>$operations</b>&nbsp;&nbsp;</td>
+        <td>array of operation names</td>
+      </tr>
+				</table>
+    	<div class="top">[ <a href="#top">Top</a> ]</div><br /><br />
+	</div>
+  <hr />
+	<a name="functionDeletePermission"></a>
+	<h3>DeletePermission <span class="smalllinenumber">[line 1312]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>boolean DeletePermission(
+[array $permissions = array()])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+
+		Delete a permission<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>Example:  <ol><li><div class="src-line">&nbsp;<span class="src-php">&lt;?php</span></div></li>
+<li><div class="src-line">&nbsp;<a href="../NIST/_rbac_api.php.html#functionDeletePermission">DeletePermission</a><span class="src-sym">(</span><span class="src-key">array</span><span class="src-sym">(</span><span class="src-str">'permission'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'...'</span><span class="src-sym">))</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-php">?&gt;</span></div></li>
+</ol></td>
+  </tr>
+</table>
+</div>
+    <br /><br />
+	
+    		<h4>Parameters</h4>
+    <table border="0" cellspacing="0" cellpadding="0">
+		      <tr>
+        <td class="type">array&nbsp;&nbsp;</td>
+        <td><b>$permissions</b>&nbsp;&nbsp;</td>
+        <td>array of permission names</td>
+      </tr>
+				</table>
+    	<div class="top">[ <a href="#top">Top</a> ]</div><br /><br />
+	</div>
+  <hr />
+	<a name="functionDeleteRole"></a>
+	<h3>DeleteRole <span class="smalllinenumber">[line 253]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>boolean DeleteRole(
+[array $roles = array()])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+
+		This command deletes an existing role from the RBAC database.<br /><br /><p>The command is valid if and only if the role to be deleted is a member of the ROLES data set.  The session associated with the deleted role is removed as well.  This function calls the <a href="../NIST/_rbac_api.php.html#functionDeleteSession">DeleteSession()</a> function to remove any open sessions.</p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>Example:  <ol><li><div class="src-line">&nbsp;<span class="src-php">&lt;?php</span></div></li>
+<li><div class="src-line">&nbsp;<a href="../NIST/_rbac_api.php.html#functionDeleteRole">DeleteRole</a><span class="src-sym">(</span><span class="src-key">array</span><span class="src-sym">(</span><span class="src-str">'role'</span><span class="src-sym">,</span><span class="src-str">'role'</span><span class="src-sym">,</span><span class="src-str">'...'</span><span class="src-sym">))</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-php">?&gt;</span></div></li>
+</ol></td>
+  </tr>
+</table>
+</div>
+    <br /><br />
+	
+    		<h4>Parameters</h4>
+    <table border="0" cellspacing="0" cellpadding="0">
+		      <tr>
+        <td class="type">array&nbsp;&nbsp;</td>
+        <td><b>$roles</b>&nbsp;&nbsp;</td>
+        <td>an array of role names</td>
+      </tr>
+				</table>
+    	<div class="top">[ <a href="#top">Top</a> ]</div><br /><br />
+	</div>
+  <hr />
+	<a name="functionDeleteSession"></a>
+	<h3>DeleteSession <span class="smalllinenumber">[line 762]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>boolean DeleteSession(
+array $sessions)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+
+		This function deletes a given session with a given owner user.<br /><br /><p>The function is valid if and only if the session identifier is a member  of the SESSIONS data set, the user is a member of the USERS data set,  and the session is owned by the given user.</p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>Example:  <ol><li><div class="src-line">&nbsp;<span class="src-php">&lt;?php</span></div></li>
+<li><div class="src-line">&nbsp;<a href="../NIST/_rbac_api.php.html#functionDeleteSession">DeleteSession</a><span class="src-sym">(</span><span class="src-key">array</span><span class="src-sym">(</span><span class="src-str">'session'</span><span class="src-sym">,</span><span class="src-str">'...'</span><span class="src-sym">))</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-php">?&gt;</span></div></li>
+</ol></td>
+  </tr>
+</table>
+</div>
+    <br /><br />
+	
+    		<h4>Parameters</h4>
+    <table border="0" cellspacing="0" cellpadding="0">
+		      <tr>
+        <td class="type">array&nbsp;&nbsp;</td>
+        <td><b>$sessions</b>&nbsp;&nbsp;</td>
+        <td>an array of session identifiers</td>
+      </tr>
+				</table>
+    	<div class="top">[ <a href="#top">Top</a> ]</div><br /><br />
+	</div>
+  <hr />
+	<a name="functionDeleteUser"></a>
+	<h3>DeleteUser <span class="smalllinenumber">[line 129]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>boolean DeleteUser(
+[array $users = array()])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+
+		This command deletes an existing user from the RBAC database.<br /><br /><p>The command is valid if and only if the user to be deleted is a member of the USERS data  set. The USERS and UA data sets and the assigned_users function are updated.  The session associated with the deleted user is removed as well.  This function calls the <a href="../NIST/_rbac_api.php.html#functionDeleteSession">DeleteSession()</a> function to remove any open sessions.</p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>Example:  <ol><li><div class="src-line">&nbsp;<span class="src-php">&lt;?php</span></div></li>
+<li><div class="src-line">&nbsp;<a href="../NIST/_rbac_api.php.html#functionDeleteUser">DeleteUser</a><span class="src-sym">(</span><span class="src-key">array</span><span class="src-sym">(</span><span class="src-str">'username'</span><span class="src-sym">,</span><span class="src-str">'username'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'...'</span><span class="src-sym">))</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-php">?&gt;</span></div></li>
+</ol></td>
+  </tr>
+</table>
+</div>
+    <br /><br />
+	
+    		<h4>Parameters</h4>
+    <table border="0" cellspacing="0" cellpadding="0">
+		      <tr>
+        <td class="type">array&nbsp;&nbsp;</td>
+        <td><b>$users</b>&nbsp;&nbsp;</td>
+        <td>an array of usernames</td>
+      </tr>
+				</table>
+    	<div class="top">[ <a href="#top">Top</a> ]</div><br /><br />
+	</div>
+  <hr />
+	<a name="functionDropActiveRole"></a>
+	<h3>DropActiveRole <span class="smalllinenumber">[line 910]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>boolean DropActiveRole(
+[string $user = &#039;&#039;], [string $session = &#039;&#039;], [array $roles = array()])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+
+		This function deletes a role from the active role set of a session owned by a  given user.<br /><br /><p>The function is valid if and only if the user is a member of the  USERS data set, the session identifier is a member of the SESSIONS data set,  the session is owned by the user, and the role is an active role of that  session.</p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>Example:  <ol><li><div class="src-line">&nbsp;<span class="src-php">&lt;?php</span></div></li>
+<li><div class="src-line">&nbsp;<a href="../NIST/_rbac_api.php.html#functionDropActiveRole">DropActiveRole</a><span class="src-sym">(</span><span class="src-str">'username'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'session'</span><span class="src-sym">,&nbsp;</span><span class="src-key">array</span><span class="src-sym">(</span><span class="src-str">'role'</span><span class="src-sym">,</span><span class="src-str">'...'</span><span class="src-sym">))</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-php">?&gt;</span></div></li>
+</ol></td>
+  </tr>
+</table>
+</div>
+    <br /><br />
+	
+    		<h4>Parameters</h4>
+    <table border="0" cellspacing="0" cellpadding="0">
+		      <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$user</b>&nbsp;&nbsp;</td>
+        <td>username</td>
+      </tr>
+		      <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$session</b>&nbsp;&nbsp;</td>
+        <td>session identifier</td>
+      </tr>
+		      <tr>
+        <td class="type">array&nbsp;&nbsp;</td>
+        <td><b>$roles</b>&nbsp;&nbsp;</td>
+        <td>an array of role names</td>
+      </tr>
+				</table>
+    	<div class="top">[ <a href="#top">Top</a> ]</div><br /><br />
+	</div>
+  <hr />
+	<a name="functionGrantPermission"></a>
+	<h3>GrantPermission <span class="smalllinenumber">[line 469]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>boolean GrantPermission(
+[array $permission = array()], [string $role = &#039;&#039;])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+
+		This command grants a role the permission to perform an operation on an  object to a role.<br /><br /><p>The command may be implemented as granting permissions  to a group corresponding to that role, i.e., setting the access control  list of the object involved.  The command is valid if and only if the pair (operation, object) represents  a permission, and the role is a member of the ROLES data set.</p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>Example:  <ol><li><div class="src-line">&nbsp;<span class="src-php">&lt;?php</span></div></li>
+<li><div class="src-line">&nbsp;<a href="../NIST/_rbac_api.php.html#functionGrantPermission">GrantPermission</a><span class="src-sym">(</span><span class="src-key">array</span><span class="src-sym">(</span><span class="src-key">array</span><span class="src-sym">(</span><span class="src-str">'object'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'operation'</span><span class="src-sym">))</span><span class="src-sym">,&nbsp;</span><span class="src-id">role</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-php">?&gt;</span></div></li>
+</ol></td>
+  </tr>
+</table>
+</div>
+    <br /><br />
+	
+    		<h4>Parameters</h4>
+    <table border="0" cellspacing="0" cellpadding="0">
+		      <tr>
+        <td class="type">array&nbsp;&nbsp;</td>
+        <td><b>$permission</b>&nbsp;&nbsp;</td>
+        <td>an array consisting of a combination of object and operation</td>
+      </tr>
+		      <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$role</b>&nbsp;&nbsp;</td>
+        <td>role name</td>
+      </tr>
+				</table>
+    	<div class="top">[ <a href="#top">Top</a> ]</div><br /><br />
+	</div>
+  <hr />
+	<a name="functionQueryEngine"></a>
+	<h3>QueryEngine <span class="smalllinenumber">[line 1655]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>array QueryEngine(
+[string $sql = &#039;&#039;], [array $param = array()], [string $type = &#039;&#039;], [integer $transaction_flag = 0])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+
+		Generic query execution engine for the RBAC data functions. This is a support  function that is not part of the standard API. This function uses the mysqli  interface and makes use of mysqli bound parameters and bound results to  lower the risk of SQL injection attacks.<br /><br /><p>The $sql paramater contains the SQL string  The $param array contains all bound parameters  The $type array contains the type indicator(s) for the bound parameter(s)  The $transaction parameter indicates the following actions: <ol><li>= do nothing, automatic commit of individual transactions</li><li>= start transaction</li><li>= commit transaction</li><li>= rollback transaction</li></ol></p><br />    <br /><br />
+	
+    		<h4>Parameters</h4>
+    <table border="0" cellspacing="0" cellpadding="0">
+		      <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$sql</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+		      <tr>
+        <td class="type">array&nbsp;&nbsp;</td>
+        <td><b>$param</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+		      <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$type</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+		      <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$transaction_flag</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+				</table>
+    	<div class="top">[ <a href="#top">Top</a> ]</div><br /><br />
+	</div>
+  <hr />
+	<a name="functionRevokePermission"></a>
+	<h3>RevokePermission <span class="smalllinenumber">[line 556]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>boolean RevokePermission(
+[array $permission = array()], [string $role = &#039;&#039;])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+
+		This command revokes the permission to perform an operation on an object from  the set of permissions assigned to a role.<br /><br /><p>The command is valid if and only if the pair (operation, object) represents  a permission, the role is a member of the ROLES data set, and the permission  is assigned to that role.</p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>Example:  <ol><li><div class="src-line">&nbsp;<span class="src-php">&lt;?php</span></div></li>
+<li><div class="src-line">&nbsp;<a href="../NIST/_rbac_api.php.html#functionRevokePermission">RevokePermission</a><span class="src-sym">(</span><span class="src-key">array</span><span class="src-sym">(</span><span class="src-key">array</span><span class="src-sym">(</span><span class="src-str">'object'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'operation'</span><span class="src-sym">))</span><span class="src-sym">,&nbsp;</span><span class="src-id">role</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-php">?&gt;</span></div></li>
+</ol></td>
+  </tr>
+</table>
+</div>
+    <br /><br />
+	
+    		<h4>Parameters</h4>
+    <table border="0" cellspacing="0" cellpadding="0">
+		      <tr>
+        <td class="type">array&nbsp;&nbsp;</td>
+        <td><b>$permission</b>&nbsp;&nbsp;</td>
+        <td>an array consisting of a combination of object and operation</td>
+      </tr>
+		      <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$role</b>&nbsp;&nbsp;</td>
+        <td>role name</td>
+      </tr>
+				</table>
+    	<div class="top">[ <a href="#top">Top</a> ]</div><br /><br />
+	</div>
+  <hr />
+	<a name="functionRolePermissions"></a>
+	<h3>RolePermissions <span class="smalllinenumber">[line 1091]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>array RolePermissions(
+[string $role = &#039;&#039;])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+
+		This function returns the set of permissions (op, obj) granted to a given  role. The function is valid if and only if the role is a member of the  ROLES data set.<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>Example:  <ol><li><div class="src-line">&nbsp;<span class="src-php">&lt;?php</span></div></li>
+<li><div class="src-line">&nbsp;<a href="../NIST/_rbac_api.php.html#functionRolePermissions">RolePermissions</a><span class="src-sym">(</span><span class="src-str">'rolename'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-php">?&gt;</span></div></li>
+</ol></td>
+  </tr>
+</table>
+</div>
+    <br /><br />
+	
+    		<h4>Parameters</h4>
+    <table border="0" cellspacing="0" cellpadding="0">
+		      <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$role</b>&nbsp;&nbsp;</td>
+        <td>role name</td>
+      </tr>
+				</table>
+    	<div class="top">[ <a href="#top">Top</a> ]</div><br /><br />
+	</div>
+  <hr />
+	<a name="functionSessionPermissions"></a>
+	<h3>SessionPermissions <span class="smalllinenumber">[line 1178]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>array SessionPermissions(
+[string $session = &#039;&#039;])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+
+		This function returns the permissions of the session, i.e., the permissions  assigned to its active roles. The function is valid if and only if the session  identifier is a member of the SESSIONS data set.<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>Example:  <ol><li><div class="src-line">&nbsp;<span class="src-php">&lt;?php</span></div></li>
+<li><div class="src-line">&nbsp;<a href="../NIST/_rbac_api.php.html#functionSessionPermissions">SessionPermissions</a><span class="src-sym">(</span><span class="src-str">'session'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-php">?&gt;</span></div></li>
+</ol></td>
+  </tr>
+</table>
+</div>
+    <br /><br />
+	
+    		<h4>Parameters</h4>
+    <table border="0" cellspacing="0" cellpadding="0">
+		      <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$session</b>&nbsp;&nbsp;</td>
+        <td>session identifier</td>
+      </tr>
+				</table>
+    	<div class="top">[ <a href="#top">Top</a> ]</div><br /><br />
+	</div>
+  <hr />
+	<a name="functionSessionRoles"></a>
+	<h3>SessionRoles <span class="smalllinenumber">[line 1150]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>array SessionRoles(
+[string $session = &#039;&#039;])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+
+		This function returns the active roles associated with a session. The function  is valid if and only if the session identifier is a member of the SESSIONS  data set.<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>Example:  <ol><li><div class="src-line">&nbsp;<span class="src-php">&lt;?php</span></div></li>
+<li><div class="src-line">&nbsp;<a href="../NIST/_rbac_api.php.html#functionSessionRoles">SessionRoles</a><span class="src-sym">(</span><span class="src-str">'session'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-php">?&gt;</span></div></li>
+</ol></td>
+  </tr>
+</table>
+</div>
+    <br /><br />
+	
+    		<h4>Parameters</h4>
+    <table border="0" cellspacing="0" cellpadding="0">
+		      <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$session</b>&nbsp;&nbsp;</td>
+        <td>session identifier</td>
+      </tr>
+				</table>
+    	<div class="top">[ <a href="#top">Top</a> ]</div><br /><br />
+	</div>
+  <hr />
+	<a name="functionUserPermissions"></a>
+	<h3>UserPermissions <span class="smalllinenumber">[line 1120]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>array UserPermissions(
+[string $user = &#039;&#039;])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+
+		This function returns the permissions a given user gets through his/her  assigned roles. The function is valid if and only if the user is a member of  the USERS data set.<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>Example:  <ol><li><div class="src-line">&nbsp;<span class="src-php">&lt;?php</span></div></li>
+<li><div class="src-line">&nbsp;<a href="../NIST/_rbac_api.php.html#functionUserPermissions">UserPermissions</a><span class="src-sym">(</span><span class="src-str">'username'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-php">?&gt;</span></div></li>
+</ol></td>
+  </tr>
+</table>
+</div>
+    <br /><br />
+	
+    		<h4>Parameters</h4>
+    <table border="0" cellspacing="0" cellpadding="0">
+		      <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$user</b>&nbsp;&nbsp;</td>
+        <td>username</td>
+      </tr>
+				</table>
+    	<div class="top">[ <a href="#top">Top</a> ]</div><br /><br />
+	</div>
+
+        <div class="credit">
+		    <hr />
+		    Documentation generated on Mon, 24 May 2010 09:24:03 +0200 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
+	      </div>
+      </td></tr></table>
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>
